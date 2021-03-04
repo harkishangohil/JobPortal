@@ -1,0 +1,3 @@
+include ':JobSeeker'
+include ':app'
+rootProject.name = "Seekers"
