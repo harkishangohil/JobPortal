@@ -52,7 +52,7 @@ public class WebService {
 
     public interface WebServiceInterface {
 
-        @FormUrlEncoded
+      /*  @FormUrlEncoded
         @POST("jobseeker.php")
         Call<JobseekerResponse> SendJobSeekerData(
                 @Field("fname") String fname,
@@ -98,7 +98,7 @@ public class WebService {
                 @Field("country") String country,
                 @Field("some_keyword") String some_keyword,
                 @Field("cmp_name") String cmp_name
-        );
+        );*/
 
 //Edit_personel_detail_response
         //http://gohelvijay47932685.ipage.com/spr_lib/personal_one.php
@@ -149,19 +149,19 @@ public class WebService {
                 @Field("role") String role
                 );
 
-        @FormUrlEncoded
+        @Multipart
         @POST("proffesional.php")
         Call<proffesional_data_class> Post_Prodesional_details(
-                @Field("id") String id,
-                @Field("mobile") String mobile,
-                @Field("desc_prof") String desc_prof,
-                @Field("pre_work_loc") String pre_work_loc,
-                @Field("desi_jtype") String desi_jtype,
-                @Field("desi_emp_type") String desi_emp_type,
-                @Field("gender") String gender,
-                @Field("image") String image,
-                @Field("address") String address,
-                @Field("language") String language
+                @Part("id") RequestBody id,
+                @Part("mobile") RequestBody mobile,
+                @Part("desc_prof") RequestBody desc_prof,
+                @Part("pre_work_loc") RequestBody pre_work_loc,
+                @Part("desi_jtype") RequestBody desi_jtype,
+                @Part("desi_emp_type") RequestBody desi_emp_type,
+                @Part("gender") RequestBody gender,
+                @Part("image") MultipartBody.Part image,
+                @Part("address") RequestBody address,
+                @Part("language") RequestBody language
                 );
 
     }
