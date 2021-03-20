@@ -2,10 +2,10 @@ package com.example.jobseeker;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.sparrow.seekerslibrary.Edit_personel_detail_response_class;
 import com.sparrow.seekerslibrary.JobseekerResponse;
 import com.sparrow.seekerslibrary.education_data_class;
 import com.sparrow.seekerslibrary.experiance_data_class;
+import com.sparrow.seekerslibrary.personel_details_class;
 import com.sparrow.seekerslibrary.proffesional_data_class;
 
 import java.util.concurrent.TimeUnit;
@@ -52,60 +52,9 @@ public class WebService {
 
     public interface WebServiceInterface {
 
-      /*  @FormUrlEncoded
-        @POST("jobseeker.php")
-        Call<JobseekerResponse> SendJobSeekerData(
-                @Field("fname") String fname,
-                @Field("lname") String lname,
-                @Field("image") String image,
-                @Field("fathername") String fathername,
-                @Field("gender") String gender,
-                @Field("dob") String dob,
-                @Field("caddress") String caddress,
-                @Field("cstate") String cstate,
-                @Field("ccity") String ccity,
-                @Field("cpincode") String cpincode,
-                @Field("paddress") String paddress,
-                @Field("pastate") String pastate,
-                @Field("pacity") String pacity,
-                @Field("papincode") String papincode,
-                @Field("mobile") String mobile,
-                @Field("email") String email,
-                @Field("tenb") String tenb,
-                @Field("teni") String teni,
-                @Field("tenc") String tenc,
-                @Field("teny") String teny,
-                @Field("twb") String twb,
-                @Field("twi") String twi,
-                @Field("twc") String twc,
-                @Field("twy") String twy,
-                @Field("grab") String grab,
-                @Field("grai") String grai,
-                @Field("grac") String grac,
-                @Field("gray") String gray,
-                @Field("otherb") String otherb,
-                @Field("otheri") String otheri,
-                @Field("otherc") String otherc,
-                @Field("othery") String othery,
-                @Field("workedother") String workedother,
-                @Field("ex") String ex,
-                @Field("month") String month,
-                @Field("role") String role,
-                @Field("organization") String organization,
-                @Field("salary") String salary,
-                @Field("skill1") String skill1,
-                @Field("regi_date") String regi_date,
-                @Field("country") String country,
-                @Field("some_keyword") String some_keyword,
-                @Field("cmp_name") String cmp_name
-        );*/
-
-//Edit_personel_detail_response
-        //http://gohelvijay47932685.ipage.com/spr_lib/personal_one.php
-
-                @Multipart
-                @POST("personal_one.php")
-                Call<Edit_personel_detail_response_class> Post_Personel_Detail(
+        @Multipart
+        @POST("personal_one.php")
+        Call<personel_details_class> Post_Personel_Detail(
                 @Part("name") RequestBody  name,
                 @Part("email") RequestBody  email,
                 @Part("password") RequestBody  password,
